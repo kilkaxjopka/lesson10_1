@@ -1,0 +1,1 @@
+Добавил функцию "processing" и README файл
