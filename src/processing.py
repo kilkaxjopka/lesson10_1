@@ -20,10 +20,4 @@ data = [
 filtered_data = filter_by_state(data)
 sorted_data = sort_by_date(data, "desc")
 
-print("Filtered by state ('EXECUTED'):")
-for d in filtered_data:
-    print(d)
 
-print("\nSorted by date (descending):")
-for d in sorted_data:
-    print(d)

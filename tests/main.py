@@ -1,4 +1,4 @@
-from src.df import filter_by_state, sort_by_date
+from src.processing import filter_by_state, sort_by_date
 from src.widget import mask_number, refactor_the_date
 
 card_num1 = "Visa Platinum 7000 7922 8960 6361"
@@ -14,6 +14,8 @@ data = [
     {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
+filtered_data = filter_by_state(data)
+sorted_data = sort_by_date(data, "desc")
 
 print(mask_number(card_num1))
 print(mask_number(card_num2))
@@ -22,9 +24,9 @@ print(mask_number(acc_num2))
 print(refactor_the_date(date1))
 print(refactor_the_date(date2))
 print("Filtered by state ('EXECUTED'):")
-for i in filter_by_state:
+for i in filtered_data:
     print(i)
 
 print("\nSorted by date (descending):")
-for i in sort_by_date:
+for i in sorted_data:
     print(i)
