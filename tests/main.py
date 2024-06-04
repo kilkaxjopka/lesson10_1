@@ -15,7 +15,7 @@ data = [
 ]
 
 filtered_data = filter_by_state(data)
-sorted_data = sort_by_date(data, "desc")
+sorted_data = sort_by_date(data)
 
 print(mask_number(card_num1))
 print(mask_number(card_num2))
