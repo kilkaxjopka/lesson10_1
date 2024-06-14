@@ -14,7 +14,7 @@ def unique_list() -> list:
 
 
 @pytest.mark.parametrize(
-    "filter_by_state, sort_by_date",
+    "state, result",
     [
         (
                 "EXECUTED",
@@ -32,8 +32,8 @@ def unique_list() -> list:
         ),
     ],
 )
-def test_key_value_output(unique_list: list, key_state: str, expected_result: list) -> None:
-    assert filter_by_state(unique_list, filter_by_state) == expected_result
+def test_key_value_output(unique_list: list, state: str, result: list) -> None:
+    assert filter_by_state(unique_list, state) == result
 
 
 def test_decreasing_dates(unique_list: list) -> None:
